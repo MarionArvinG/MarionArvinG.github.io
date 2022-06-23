@@ -1,192 +1,173 @@
-:root {
-    --primary: rgb(186, 102, 0);
-    --secondary: rgb(255, 235, 211);
-    --background: rgb(255, 251, 241);
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 
-    --font: "Poppins";
+/**********TAG SELECTORS**********/
 
-
-    font-family: var(--font);
-    font-size: 62.5%;
-    color: var(--primary);
+html {
+  box-sizing: border-box;
+  font-size: 100%;
 }
 
 body {
-    background-color: var(--background);
-
-    font-size: 2rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 60px 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  max-width: 100%;
+  min-height: 100vh;
+  height: auto;
+  letter-spacing: 0.1em;
 }
 
-#links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-    margin: 30px 0;
+h1 {
+  color: #024873;
 }
 
-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+h2 {
+  color: #024873;
 }
 
-svg {
-    position: absolute;
-    top: 18px;
-    right: 24px;
-
-    width: 20px;
-    height: 20px;
-    border-radius: 0;
-    z-index: 3;
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-color: rgb(196, 196, 196);
+  border-width: 5px;
+  width: 100px;
 }
 
-.social-icons {
-    top: 12px;
-    left: 15px;
+/**********CLASS SELECTORS**********/
 
-    width: 33px;
-    height: 33px;
+.logo {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 35px auto;
+  border-radius: 100%;
 }
 
-.a:hover svg {
-    top: 12px;
-    right: 18px;
+.links {
+  display: block;
+  max-width: 550px;
+  margin: 0 auto 15px;
+  margin-bottom: 5px;
+  padding: 15px 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.svg-color {
-    stroke: var(--primary);
+.links .links:hover {
+  background-color: #fff;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
 }
 
-.social-icons {
-    fill: var(--primary);
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 
-.inner-box:hover .svg-color {
-    stroke: var(--background);
+.links .links_first {
+  border-bottom: 3px solid #80d6ff;
+  box-shadow: inset 0 -4px 0 #80d6ff;
+  border: 2px solid #80d6ff;
+  background-color: #80d6ff;
 }
 
-.inner-box:hover .social-icons {
-    fill: var(--background);
+.links .links_second {
+  border-bottom: 3px solid #ffa093;
+  box-shadow: inset 0 -4px 0 #ffa093;
+  border: 2px solid #ffa093;
+  background-color: #ffa093;
 }
 
-.text {
-    text-align: center;
+.links .links_third {
+  border-bottom: 3px solid #bedde8;
+  box-shadow: inset 0 -4px 0 #bedde8;
+
+  border: 2px solid #bedde8;
+  background-color: #bedde8;
 }
 
-.greeting {
-    font-size: 1.7rem;
+.links .links_fourth {
+  box-shadow: inset 0 -4px 0 #73e2a7;
 
-    opacity: 0.45;
-    margin-top: 35px;
+  border: 2px solid #73e2a7;
+  background-color: #73e2a7;
 }
 
-.greeting a {
-    text-decoration: underline;
-
-    border: none;
-    display: inline;
-    padding: 0;
+.links .links_fifth {
+  border-bottom: 3px solid #ffc15e;
+  box-shadow: inset 0 -4px 0 #ffc15e;
+  border: 2px solid #ffc15e;
+  background-color: #ffc15e;
 }
 
-.link-box {
-    position: relative;
-
-    width: 100%;
-    max-width: 394px;
-    margin-bottom: -55px;
+.channels {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-a {
-    background-color: var(--background);
-    color: var(--primary);
-    text-decoration: none;
-
-    display: block;
-    position: relative;
-
-    width: 100%;
-    max-width: 303px;
-    padding: 13px 20px 13px 58px;
-    margin-bottom: 20px;
-    border: 2px solid var(--primary);
-    z-index: 2;
-
-    transition: transform 200ms ease-in-out;
-}
-a:hover {
-    background-color: var(--primary);
-    color: var(--background);
-
-    transform: translate(9px, -9px);
+.channels .channels_item {
+  flex: 5;
+  margin-right: 5px;
+  transition: transform 0.2s;
+  color: #024873;
 }
 
-.link-background {
-    background-color: var(--secondary);
-
-    transform: translate(9px, -89px);
-    height: 60px;
-    width: 100%;
-    max-width: 385px;
+.channels_item:hover {
+  transform: scale(1.25) rotate(1turn);
+  transition: transform 1.5s;
 }
 
-form {
-    background-color: var(--secondary);
-
-    width: 100%;
-    max-width: 394px;
-    padding: 10px 30px;
-    box-sizing: border-box;
+/**********ID SELECTORS**********/
+/*ID Selectors can only be ussed once per page*/
+/*
+#heading {
+  color: blue
 }
-
-input, 
-textarea {
-    background-color: var(--background);
-    color: var(--primary);
-
-    font-family: var(--font);
-    font-size: 1.4rem;
-
-    height: 40px;
-    width: 100%;
-    padding: 15px;
-    border: 2px solid var(--secondary);
-    box-sizing: border-box;
-
-    transition: border 200ms ease-in-out;
-}
-
-input:focus, 
-textarea:focus {
-    outline: none;
-    border: solid 2px var(--primary);
-}
-
-textarea {
-    height: 100px;
-    resize: vertical;
-}
-
-button {
-    background-color: var(--secondary);
-    color: var(--primary);
-
-    font-size: 1.7rem;
-
-    padding: 3px 15px;
-    border: 2px solid var(--primary);
-    cursor: pointer;
-}
-button:hover {
-    background-color: var(--primary);
-    color: var(--secondary);
-}
+*/
